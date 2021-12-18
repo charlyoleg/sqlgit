@@ -1,0 +1,25 @@
+{
+  "name": "sqlgit",
+  "version": "1.0.0",
+  "description": "a PoC for storing a SQL-database in a git-repository",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlyoleg/sqlgit.git"
+  },
+  "keywords": [
+    "sql",
+    "db",
+    "git"
+  ],
+  "author": "charlyoleg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlyoleg/sqlgit/issues"
+  },
+  "homepage": "https://github.com/charlyoleg/sqlgit#readme"
+}

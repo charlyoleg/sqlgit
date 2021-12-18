@@ -10,6 +10,13 @@ Presentation
 
 .. _SQLite : https://sqlite.org
 
+The advantages of storing a *relational database* in *git* are:
+
+- database-management in git-style
+- simpler deployment and administration
+
+This concept fits well with small size databases.
+
 
 Getting Started
 ===============
