@@ -1,0 +1,15 @@
+# .gitignore for sqlgit
+*~
+*.pdf
+*.tgz
+node_modules/
+.venv
+__pycache__/
+# for sphinc-doc and others
+build/
+dist/
+# web-ui (aka front-end)
+web_ui/dist/
+# https web_server
+web_server/dist/
+web_server/certificates/
