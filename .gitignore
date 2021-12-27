@@ -13,3 +13,5 @@ web_ui/dist/
 # https web_server
 web_server/dist/
 web_server/certificates/
+# the sqlgit databases aka xsdb
+xsdb/

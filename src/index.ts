@@ -1,6 +1,7 @@
 // index.ts
 
 import DatabaseConstructor, {Database} from "better-sqlite3";
+import xsdb_preparation from "./xsdb_preparation/xsdb_preparation.js";
 
 function openDb(): Database {
   //const db_options = { verbose: console.log };
@@ -29,6 +30,8 @@ const stmt3 = db.prepare('SELECT age FROM persons WHERE name = ?');
 const person = stmt3.get('toto');
 console.log(person.age);
 console.log(stmt3.get('juju'));
+
+xsdb_preparation();
 
 console.log("Bye from index.ts of sqlgit!");
 

@@ -6,8 +6,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc --project src",
-    "run": "node dist/index.js",
+    "run_app": "node dist/index.js",
     "clean": "fse remove dist/",
+    "rerun_app": "run-s clean build run_app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
