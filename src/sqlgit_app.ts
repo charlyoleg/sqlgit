@@ -1,4 +1,4 @@
-// index.ts
+// sqlgit_app.ts
 
 import DatabaseConstructor, {Database} from "better-sqlite3";
 import xsdb_init_one from "./xsdb_init/xsdb_init_one.js";
@@ -11,7 +11,7 @@ function openDb(): Database {
   return db;
 }
 
-console.log("Hello from index.ts of sqlgit!");
+console.log("Hello from sqlgit_app.ts of sqlgit!");
 
 const db = openDb();
 db.prepare('CREATE TABLE persons (name TEXT, age INT)').run();
@@ -33,5 +33,5 @@ console.log(stmt3.get('juju'));
 
 await xsdb_init_one("./xsdb/xsdb_one", "xsdb_one");
 
-console.log("Bye from index.ts of sqlgit!");
+console.log("Bye from sqlgit_app.ts of sqlgit!");
 

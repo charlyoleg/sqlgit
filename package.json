@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "a PoC for storing a SQL-database in a git-repository",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/sqlgit_app.js",
   "scripts": {
     "build": "tsc --project src",
-    "run_app": "node dist/index.js",
+    "run_app": "node dist/sqlgit_app.js",
     "run_xsdb_init": "node dist/xsdb_init.js",
     "clean": "fse remove dist/",
     "rerun_app": "run-s clean build run_app",
