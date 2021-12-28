@@ -7,8 +7,10 @@
   "scripts": {
     "build": "tsc --project src",
     "run_app": "node dist/index.js",
+    "run_xsdb_init": "node dist/xsdb_init.js",
     "clean": "fse remove dist/",
     "rerun_app": "run-s clean build run_app",
+    "rerun_xsdb_init": "run-s clean build run_xsdb_init",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

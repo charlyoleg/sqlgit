@@ -1,4 +1,4 @@
-// xsdb_preparation.ts
+// xsdb_init_one.ts
 
 import gitignore from './gitignore.js';
 
@@ -9,7 +9,7 @@ async function create_dir (path: string) {
   try {
     const path_exists = await fse.pathExists(path);
     if (!path_exists) {
-      console.log(`The directory ${path} is created ...`);
+      console.log(`Create the directory ${path} ...`);
       fse.ensureDir(path);
     } else {
       console.log(`ERR236: Error, the path ${path} exists already!`);
@@ -22,7 +22,7 @@ async function create_dir (path: string) {
 }
 
 async function write_file (path: string, filename: string, fdata:string) {
-  console.log(`Writing file ${filename} ...`);
+  console.log(`Write the file ${filename} ...`);
   const fpath = path + '/' + filename;
   try {
     await fse.outputFile(fpath, fdata);
@@ -32,13 +32,14 @@ async function write_file (path: string, filename: string, fdata:string) {
   }
 }
 
-async function xsdb_preparation (path: string, xsdb_name: string) {
+async function xsdb_init_one (path: string, xsdb_name: string) {
+  console.log(`Initialize the xsdb ${xsdb_name} ...`);
   await create_dir(path);
+  //console.log(gitignore.filename);
+  //console.log(gitignore.content(xsdb_name));
   await write_file(path, gitignore.filename, gitignore.content(xsdb_name));
-  console.log(gitignore.filename);
-  console.log(gitignore.content(xsdb_name));
 }
 
 
-export default xsdb_preparation;
+export default xsdb_init_one;
 
