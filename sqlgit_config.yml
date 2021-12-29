@@ -2,6 +2,22 @@
 
 
 #
+# application mode
+#
+
+readonly_global: false                    # high-level readonly parameter. For low-level readonly check the xsdb-parameters.
+
+readonly_guest_enable: true               # can the app be accessed in read-only mode without sign-in ?
+
+registration_enable: true                 # is the registration-page available ?
+registration_with_invitation_code: true   # does a new user need an invitation-code for registring ?
+registration_with_captcha: true           # is there a captcha in the registaration-page ?
+
+create_new_user: true                     # enable registered user to create new users
+
+
+
+#
 # web server front
 #
 
@@ -25,6 +41,7 @@ https:
 xsdb_main:
   path: "./xsdb/xsdb_alpha"
   name: "sqlgit_main"
+  readonly: false
   remotes:
   - url: git@github.com:charlyoleg/xsdb_alpha1.git
     branch: master
@@ -36,6 +53,7 @@ xsdb_main:
 xsdb_secondary:
   path: "./xsdb/xsdb_centaure"
   name: "centaure"
+  readonly: false
   remotes:
   - url: git@github.com:charlyoleg/xsdb_centaure1.git
     branch: master

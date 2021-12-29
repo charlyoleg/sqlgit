@@ -38,6 +38,13 @@ function display_config (cfg:any) {
   const xsdb_secondary_remotes = new RemoteInfo();
   xsdb_secondary_remotes.add(cfg.xsdb_secondary.remotes);
   const cfg_info = `sqlgit config:
+  app:
+    readonly_global:                    ${cfg.readonly_global}
+    readonly_guest_enable:              ${cfg.readonly_guest_enable}
+    registration_enable:                ${cfg.registration_enable}
+    registration_with_invitation_code:  ${cfg.registration_with_invitation_code}
+    registration_with_captcha:          ${cfg.registration_with_captcha}
+    create_new_user:                    ${cfg.create_new_user}
   servers:
     http:
       enable:   ${cfg.http.enable}
@@ -53,10 +60,12 @@ function display_config (cfg:any) {
     xsdb_main:
       path:     ${cfg.xsdb_main.path}
       name:     ${cfg.xsdb_main.name}
+      readonly: ${cfg.xsdb_main.readonly}
       remotes:  ${xsdb_main_remotes.remote_str}
     xsdb_secondary:
       path:     ${cfg.xsdb_secondary.path}
       name:     ${cfg.xsdb_secondary.name}
+      readonly: ${cfg.xsdb_secondary.readonly}
       remotes:  ${xsdb_secondary_remotes.remote_str}
 `;
   console.log(cfg_info);
