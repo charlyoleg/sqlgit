@@ -39,15 +39,15 @@ https:
 #
 
 xsdb_main:
-  path: "./xsdb/xsdb_alpha"
-  name: "sqlgit_main"
+  path: "./xsdb/xsdb_sqlgit_main"
+  name: "xsdb_sqlgit_main"
   readonly: false
   remotes:
-  - url: git@github.com:charlyoleg/xsdb_alpha1.git
+  - url: git@github.com:charlyoleg/xsdb_sqlgit_main1.git
     branch: master
-  - url: git@github.com:charlyoleg/xsdb_alpha2.git
+  - url: git@github.com:charlyoleg/xsdb_sqlgit_main2.git
     branch: main
-  - url: git@github.com:charlyoleg/xsdb_alpha3.git
+  - url: git@github.com:charlyoleg/xsdb_sqlgit_main3.git
     branch: backup
 
 xsdb_secondary:
