@@ -31,7 +31,6 @@ const person = stmt3.get('toto');
 console.log(person.age);
 console.log(stmt3.get('juju'));
 
-await xsdb_init_one("./xsdb/xsdb_one", "xsdb_one");
 
 console.log("Bye from sqlgit_app.ts of sqlgit!");
 

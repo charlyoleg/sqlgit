@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^7.4.5",
-    "fs-extra": "^10.0.0"
+    "fs-extra": "^10.0.0",
+    "yaml": "^1.10.2"
   }
 }

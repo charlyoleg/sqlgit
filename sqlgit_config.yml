@@ -1,0 +1,36 @@
+# sqlgit_config.yml
+
+http:
+  enable: true
+  port: 8081
+  hostname: "localhost"   # localhost/INADDR_LOOPBACK (127.0.0.1), any/INADDR_ANY (0.0.0.0)
+
+https:
+  enable: true
+  port: 8082
+  hostname: "0.0.0.0"     # localhost/INADDR_LOOPBACK (127.0.0.1), any/INADDR_ANY (0.0.0.0)
+  key: "./ssl_sqlgit.key"
+  cert: "./ssl_sqlgit.crt"
+
+xsdb_main:
+  path: "./xsdb/xsdb_alpha"
+  name: "sqlgit_main"
+  remotes:
+  - url: git@github.com:charlyoleg/xsdb_alpha1.git
+    branch: master
+  - url: git@github.com:charlyoleg/xsdb_alpha2.git
+    branch: main
+  - url: git@github.com:charlyoleg/xsdb_alpha3.git
+    branch: backup
+
+
+xsdb_secondary:
+  path: "./xsdb/xsdb_centaure"
+  name: "centaure"
+  remotes:
+  - url: git@github.com:charlyoleg/xsdb_centaure1.git
+    branch: master
+  - url: git@github.com:charlyoleg/xsdb_centaure2.git
+    branch: master
+
+

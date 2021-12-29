@@ -17,6 +17,7 @@ async function create_dir (path: string) {
     }
   } catch (err) {
     console.log(`ERR489: Exception thrown by fs-extra by checking or creating the directory ${path}!`);
+    console.error(err);
     process.exit(51);
   }
 }
@@ -28,6 +29,7 @@ async function write_file (path: string, filename: string, fdata:string) {
     await fse.outputFile(fpath, fdata);
   } catch (err) {
     console.log(`ERR467: Exception thrown by fs-extra by writing the file ${fpath}!`);
+    console.error(err);
     process.exit(51);
   }
 }
