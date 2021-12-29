@@ -1,5 +1,10 @@
 # sqlgit_config.yml
 
+
+#
+# web server front
+#
+
 http:
   enable: true
   port: 8081
@@ -12,6 +17,11 @@ https:
   key: "./ssl_sqlgit.key"
   cert: "./ssl_sqlgit.crt"
 
+
+#
+# backend databases
+#
+
 xsdb_main:
   path: "./xsdb/xsdb_alpha"
   name: "sqlgit_main"
@@ -22,7 +32,6 @@ xsdb_main:
     branch: main
   - url: git@github.com:charlyoleg/xsdb_alpha3.git
     branch: backup
-
 
 xsdb_secondary:
   path: "./xsdb/xsdb_centaure"
